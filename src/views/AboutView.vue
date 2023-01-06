@@ -16,7 +16,7 @@
     }),
     methods: {
       button () {
-        this.axios.get('/testController', { 
+        this.axios.get('/test', { 
           params: { tCont: this.b1 } 
         })
         .then(result => {
