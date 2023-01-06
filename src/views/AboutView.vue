@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-    <input type="text" :v-model="testContent" />
+    <input type="text" v-model="testContent" />
     <input type="button" @click="button" value="전송"/>
     <p>{{a}}</p>
   </div>
