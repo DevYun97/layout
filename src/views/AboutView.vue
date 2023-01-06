@@ -17,7 +17,7 @@
     methods: {
       button () {
         this.axios.get('/test', { 
-          params: { tCont: this.b1 } 
+          params: { tCont: this.testContent } 
         })
         .then(result => {
           console.log(result.data)
