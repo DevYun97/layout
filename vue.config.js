@@ -1,7 +1,7 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({ 
   outputDir: "../src/main/resources/static",  
-  indexPath: "../static/index.html",  
+  indexPath: "../static/vue/index.html",  
   devServer: {  
     port: 8081,
     proxy: "http://localhost:8088"  
