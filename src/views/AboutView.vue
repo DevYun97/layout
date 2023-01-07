@@ -15,7 +15,9 @@
     }),
     methods: {
       subDate() {
-        this.axios.post('/test', this.testContent)
+        const dd = new FormData();
+        dd.append('demo', this.testContent)
+        this.axios.post('/test', dd)
         .then(result =>{
           console.log(result.data)
         })
