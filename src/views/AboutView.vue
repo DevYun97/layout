@@ -16,7 +16,7 @@
     }),
     methods: {
       button () {
-        this.axios.post('/test', { 
+        this.axios.post('http://localhost:8088/test', { 
           params: { tCont: this.testContent } 
         })
         .then(result => {
