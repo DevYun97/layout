@@ -2,8 +2,8 @@
   <div class="about">
     <h1>This is an about page</h1>
     <input type="text" v-model="testContent" />
-    <input type="button" @click="button" value="전송"/>
-    <p>{{a}}</p>
+    <input type="button" @click="subDate" value="전송"/>
+    <!-- <p>{{a}}</p> -->
   </div>
 </template>
 
@@ -11,17 +11,12 @@
   export default {
     name: 'about',
     data: () => ({
-      testContent: "",
-      a: ''
+      testContent: ""
     }),
     methods: {
-      button () {
+      subDate() {
         this.axios.post('http://localhost:8088/test', { 
           params: { tCont: this.testContent } 
-        })
-        .then(result => {
-          console.log(result.data)
-          this.a = result.data
         })
       }
     }
