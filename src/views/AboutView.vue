@@ -11,12 +11,13 @@
   export default {
     name: 'about',
     data: () => ({
-      testContent: ""
+      testContent: ' '
     }),
     methods: {
       subDate() {
-        this.axios.post('/test', { 
-          params: { tCont: this.testContent } 
+        this.axios.post('/test', testContent)
+        .then(result =>{
+          console.log(result.data)
         })
         .then((err)=>{
           console.log(err);
