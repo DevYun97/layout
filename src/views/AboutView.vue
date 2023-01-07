@@ -15,11 +15,13 @@
     }),
     methods: {
       subDate() {
-        this.axios.post('http://localhost:8088/test', { 
+        this.$axios.post('http://localhost:8088/test', { 
           params: { tCont: this.testContent } 
+        })
+        .then((err)=>{
+          console.log(err);
         })
       }
     }
   }
 </script>
-
