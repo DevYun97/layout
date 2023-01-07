@@ -4,14 +4,17 @@
     <input type="text" v-model="testContent" />
     <input type="button" @click="subBtn" value="전송"/>
     <!-- <p>{{a}}</p> -->
+    <button @click="postBtn">post</button>
   </div>
 </template>
 
 <script>
+import axios from 'axios';
   export default {
     name: 'about',
     data: () => ({
-      testContent: '1234'
+      testContent: '1234',
+      testone: "aa"
     }),
     methods: {
       subBtn() {
@@ -25,6 +28,17 @@
         })
         .then(err=>{
           console.log("err:" + err);
+        })
+      },
+      postBtn(){
+        axios.post('http://localhost:8088/test/post', {
+          testName: this.testone
+        })
+        .then(res =>{
+          console.log("res:"+res)
+        })
+        .catch(err=>{
+          console.log(err)
         })
       }
     }
