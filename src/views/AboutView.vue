@@ -17,7 +17,8 @@
       subBtn() {
         const dd = new FormData();
         dd.append('demo', this.testContent)
-        this.axios.get('http://localhost:8080/test', dd)
+        //http://localhost:8080/test 시 프론트는 문제없지만 백단에서 에러발생
+        this.axios.get('http://localhost:8088/test', dd)
         .then(res =>{
           console.log("res:"+res)
           console.log("testContent:"+this.testContent)
