@@ -31,7 +31,7 @@ import axios from 'axios';
         })
       },
       postBtn(){
-        this.axios.post('http://localhost:8088/test/post', {
+        this.axios.post('/test/post', {
           testName: this.testone
         })
         .then(res =>{
