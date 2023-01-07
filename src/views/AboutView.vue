@@ -21,7 +21,7 @@
         dd.append('demo', this.testContent)
         this.axios.get('http://localhost:8088/test', dd)
         .then(res =>{
-          console.log(result.data)
+          console.log(result.dd)
         })
         .then((err)=>{
           console.log(err);
