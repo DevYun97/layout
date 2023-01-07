@@ -32,7 +32,8 @@ import axios from 'axios';
       },
       postBtn(){
         this.axios.post('/test/post', {
-          testName: this.testone
+          testName: this.testone,
+          tCont: this.testContent
         })
         .then(res =>{
           console.log("res:"+res.data)
