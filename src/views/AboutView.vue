@@ -13,7 +13,7 @@
   export default {
     name: 'about',
     data: () => ({
-      testContent: ' '
+      testContent: '1234'
     }),
     methods: {
       subBtn() {
