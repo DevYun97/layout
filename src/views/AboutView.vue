@@ -14,7 +14,7 @@ import axios from 'axios';
     name: 'about',
     data: () => ({
       testContent: '1234',
-      testone: "aa"
+      testone: 'userID'
     }),
     methods: {
       subBtn() {
@@ -35,10 +35,10 @@ import axios from 'axios';
           testName: this.testone
         })
         .then(res =>{
-          console.log("res:"+res)
+          console.log("res:"+res.data)
         })
         .catch(err=>{
-          console.log(err)
+          console.log(err.res)
         })
       }
     }
