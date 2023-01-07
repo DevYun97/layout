@@ -16,7 +16,7 @@
     }),
     methods: {
       button () {
-        this.axios.get('/test', { 
+        this.axios.post('/test', { 
           params: { tCont: this.testContent } 
         })
         .then(result => {
