@@ -15,7 +15,7 @@
     }),
     methods: {
       subDate() {
-        this.axios.post('/test', testContent)
+        this.axios.post('/test', this.testContent)
         .then(result =>{
           console.log(result.data)
         })
