@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="about mainContain">
     <h1>This is an about page</h1>
     <input type="text" v-model="testContent" />
     <input type="button" @click="subBtn" value="전송"/>
@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import axios from 'axios';
   export default {
     name: 'about',
     data: () => ({

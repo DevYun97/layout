@@ -1,30 +1,41 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/" id="projectName">프로젝트명</router-link>
   </nav>
-  <router-view/>
+  <router-view />
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+body {
+  /* background-color: rgb(4, 38, 4); */
+  background-color: rgb(14, 28, 14);
+  color: rgb(236, 236, 236);
 }
-
+a {
+  text-decoration-line: none;
+}
 nav {
-  padding: 30px;
+  margin: 40px 30px;
 }
-
-nav a {
+#projectName {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+.btnClick {
+  background-color: rgb(236, 236, 236);
+  border: 1px solid  rgb(236, 236, 236);
+  color: rgb(14, 28, 14);
   font-weight: bold;
-  color: #2c3e50;
 }
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+.btn {
+    height: 40px; 
+    padding: 3px 15px;
+    border: 1px solid rgb(236, 236, 236);
+    border-radius: 20px;
+    color: rgb(236, 236, 236);   
+    background: transparent;
+  }
+  .btn:hover {
+    cursor: pointer;
+  }
 </style>
