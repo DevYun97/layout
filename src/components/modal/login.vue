@@ -18,7 +18,7 @@
 
 <script>
   export default {
-    name: 'Modal',
+    name: 'loginModal',
     data:()=>({
       user_id: '',
       user_pw: '',

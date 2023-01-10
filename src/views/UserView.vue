@@ -15,8 +15,8 @@
   </div>
   
   <div class="window" v-if="loginModal == true">   
-    <div class="model">
-      <span class="popNO" @click="lgModalYN('close')">X</span>
+    <div class="modal">
+      <span class="modalCloseBtn" @click="lgModalYN('close')">X</span>
       <h3>로그인</h3>
       <div class="form">
         <label for="UID">아이디</label>    
@@ -26,13 +26,13 @@
         <label for="UPW">비밀번호</label>    
         <input type="password" id="UPW" class="" v-model="user_pw" />
       </div>
-      <input type="button" class="btn" @click="loginBtn" value="로그인" />
+      <input type="button" class="btnBlack" @click="loginBtn" value="로그인" />
     </div>
   </div>
 
   <div class="window" v-if="joinModal == true">   
-    <div class="model">
-      <span class="popNO" @click="jModalYN(false)" >X</span>
+    <div class="modal">
+      <span class="modalCloseBtn" @click="jModalYN(false)" >X</span>
       <h3>회원가입</h3>
       <div class="form">
         <label for="user_id">아이디</label>    
@@ -60,7 +60,7 @@
           회원가입에 동의합니다.
         </label>  
       </div>
-      <input type="button" class="btn" @click="joinBtn" value="회원가입" />
+      <input type="button" class="btnBlack" @click="joinBtn" value="회원가입" />
     </div>
   </div>
 </template>
@@ -162,7 +162,7 @@
     justify-content: center;
     align-items: center;
   }
-  .model {
+  .modal {
     width: 500px;
     text-align: center;
     border: 2px solid  rgb(255, 255, 255);
@@ -171,19 +171,19 @@
     color: rgb(14, 28, 14);
     background-color: rgba(223, 231, 249, 0.809);
   }
-  .model > h3 {
+  .modal > h3 {
     font-size: 20px;
     margin-top : 0;
   }
   /* 이름을 지어주세요 */
-  .popNO { 
+  .modalCloseBtn { 
     position: relative;
     top: -35px;
     left: 230px;
     font-size: 30px;
     color: white;
   }
-  .popNO:hover {
+  .modalCloseBtn:hover {
    cursor: pointer;
   }
   .form {
@@ -207,7 +207,7 @@
   .form > input:focus {
     outline: none;
   }
-  .btn {
+  .btnBlack {
     width: 150px;
     height: 40px;
     margin: 10px 0 30px;

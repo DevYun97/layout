@@ -50,7 +50,7 @@ export default {
     padding: 0px 40px;
   }
   h2 {
-    font-size:40px;
+    font-size: 40px;
   }
   .routerNav{
     width: 100%;   
@@ -59,7 +59,7 @@ export default {
     position:fixed;
     bottom: 100px;
     display: flex;
-    justify-content:center;
+    justify-content: center;
   }
   .routerBtn {
     width: 220px;
