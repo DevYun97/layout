@@ -70,11 +70,16 @@
   export default {
 
     data:() =>({
-      UID: '',
-      user_pw: '',
-      user_name: '',
-      user_email: '',
-      user_phone: '',
+      UID: user_id,
+      user_pw: user_pw,
+      user_name: user_name,
+      user_email: user_email,
+      user_phone: user_phone,
+      // UID: '',
+      // user_pw: '',
+      // user_name: '',
+      // user_email: '',
+      // user_phone: '',
       joinChk: '',
       loginModal: false,
       joinModal: false
