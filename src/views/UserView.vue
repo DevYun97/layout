@@ -48,7 +48,7 @@
       </div>
       <div class="form">
         <label for="user_email">이메일</label>    
-        <input type="email" id="user_email" v-model="user_email" />
+        <input type="email" id="user_email" v-model="UEmail" />
       </div>
       <div class="form">
         <label for="user_phone">전화번호</label>    
@@ -70,16 +70,11 @@
   export default {
 
     data:() =>({
-      UID: user_id,
-      user_pw: user_pw,
-      user_name: user_name,
-      user_email: user_email,
-      user_phone: user_phone,
-      // UID: '',
-      // user_pw: '',
-      // user_name: '',
-      // user_email: '',
-      // user_phone: '',
+      UID: '',
+      user_pw: '',
+      user_name: '',
+      UEmail: '',
+      user_phone: '',
       joinChk: '',
       loginModal: false,
       joinModal: false
@@ -125,7 +120,7 @@
           console.log("user_name false")
           return false
         }
-        if(!this.user_email || this.user_email == ""){
+        if(!this.UEmail || this.UEmail == ""){
           console.log("user_email false")
           return false
         }
@@ -141,7 +136,7 @@
             UID: this.UID,
             UPW: this.user_pw,
             UName: this.user_name,
-            UEmail: this.user_email,
+            UEmail: this.UEmail,
             UPhone: this.user_phone
           })
           .then(res => {
