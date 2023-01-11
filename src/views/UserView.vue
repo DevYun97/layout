@@ -131,21 +131,21 @@
         if(!this.joinChk || this.joinChk == ""){
           console.log("joinChk false")
           return false }
-        //  else {
-        //   this.axios.post('/api/user/join', {
-        //     UID: this.user_id,
-        //     UPW: this.user_pw,
-        //     UName: this.user_name,
-        //     UEmail: this.user_email,
-        //     UPhone: this.user_phone
-        //   })
-        //   .then(res => {
-        //     console.log( "UID: "+ UID + " UPW: "+UPW + " res: " + res.data)
-        //   })
-        //   .catch(err => {
-        //     console.log("err: " + err.res)
-        //   })
-        // }      
+         else {
+          this.axios.post('/api/user/join', {
+            UID: this.user_id,
+            UPW: this.user_pw,
+            UName: this.user_name,
+            UEmail: this.user_email,
+            UPhone: this.user_phone
+          })
+          .then(res => {
+            console.log( "UID: "+ UID + " UPW: "+UPW + " res: " + res.data)
+          })
+          .catch(err => {
+            console.log("err: " + err.res)
+          })
+        }      
       }
     }
   }
