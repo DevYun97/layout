@@ -36,7 +36,7 @@
       <h3>회원가입</h3>
       <div class="form">
         <label for="user_id">아이디</label>    
-        <input type="text" id="user_id" v-model="user_id" />
+        <input type="text" id="user_id" v-model="UID" />
       </div>
       <div class="form">
         <label for="user_pw">비밀번호</label>    
@@ -70,7 +70,7 @@
   export default {
 
     data:() =>({
-      user_id: '',
+      UID: '',
       user_pw: '',
       user_name: '',
       user_email: '',
@@ -96,7 +96,7 @@
       },
       loginBtn(){
       this.axios.post('/api/user/login', {
-        UID: this.user_id,
+        UID: this.UID,
         UPW: this.user_pw
       })
       .then(res => {
@@ -108,7 +108,7 @@
       },
       joinBtn(){
         console.log(this.$data)
-        if(!this.user_id || this.user_id == ""){
+        if(!this.UID || this.UID == ""){
           console.log("id false")
           return false
         }
@@ -133,7 +133,7 @@
           return false }
          else {
           this.axios.post('/api/user/join', {
-            UID: this.user_id,
+            UID: this.UID,
             UPW: this.user_pw,
             UName: this.user_name,
             UEmail: this.user_email,
