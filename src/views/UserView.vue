@@ -100,7 +100,7 @@
           UPW: this.user_pw
         })
         .then(res => {
-          console.log( "UID: "+ UID + " UPW: "+UPW + " res: " + res.data)
+          console.log(" res: " + res.data)
         })
         .catch(err => {
           console.log("err: " + err.res);
@@ -134,11 +134,11 @@
         //  else {} 
 
         this.axios.post('/api/v1/join', {
-          UID: this.user_id,
-          UPW: this.user_pw,
-          UName: this.user_name,
-          UEmail: this.user_email,
-          UPhone: this.user_phone
+          user_id: this.user_id,
+          user_pw: this.user_pw,
+          user_name: this.user_name,
+          user_email: this.user_email,
+          user_phone: this.user_phone
         })
         .then(res => {
           console.log("res: " + res.data)
