@@ -141,7 +141,7 @@
           UPhone: this.user_phone
         })
         .then(res => {
-          console.log( "UID: "+ UID + " UPW: "+UPW + " res: " + res.data)
+          console.log("res: " + res.data)
         })
         .catch(err => {
           console.log(err+":err / err.res:" + err.res)
