@@ -36,7 +36,7 @@
       <h3>회원가입</h3>
       <div class="form">
         <label for="user_id">아이디</label>    
-        <input type="text" id="user_id" v-model="UID" />
+        <input type="text" id="user_id" v-model="user_id" />
       </div>
       <div class="form">
         <label for="user_pw">비밀번호</label>    
@@ -48,7 +48,7 @@
       </div>
       <div class="form">
         <label for="user_email">이메일</label>    
-        <input type="email" id="user_email" v-model="UEmail" />
+        <input type="email" id="user_email" v-model="user_email" />
       </div>
       <div class="form">
         <label for="user_phone">전화번호</label>    
@@ -70,10 +70,10 @@
   export default {
 
     data:() =>({
-      UID: '',
+      user_id: '',
       user_pw: '',
       user_name: '',
-      UEmail: '',
+      user_email: '',
       user_phone: '',
       joinChk: '',
       loginModal: false,
@@ -96,7 +96,7 @@
       },
       loginBtn(){
       this.axios.post('/api/user/login', {
-        UID: this.UID,
+        UID: this.user_id,
         UPW: this.user_pw
       })
       .then(res => {
@@ -108,7 +108,7 @@
       },
       joinBtn(){
         console.log(this.$data)
-        if(!this.UID || this.UID == ""){
+        if(!this.user_id || this.user_id == ""){
           console.log("id false")
           return false
         }
@@ -120,7 +120,7 @@
           console.log("user_name false")
           return false
         }
-        if(!this.UEmail || this.UEmail == ""){
+        if(!this.user_email || this.user_email == ""){
           console.log("user_email false")
           return false
         }
@@ -132,8 +132,8 @@
           console.log("joinChk false")
           return false }
          else {
-          this.axios.post('/api/user/join', {
-            UID: this.UID,
+          this.axios.post('/api/v1/join', {
+            UID: this.user_id,
             UPW: this.user_pw,
             UName: this.user_name,
             UEmail: this.UEmail,
