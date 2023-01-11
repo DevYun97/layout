@@ -21,7 +21,7 @@ const routes = [
     component: () => import('../views/PostsView.vue')
   },
   {
-    path: '/user/user',
+    path: '/user',
     name: 'user',
     component: () => import('../views/UserView.vue')
   }

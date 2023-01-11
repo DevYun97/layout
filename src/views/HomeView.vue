@@ -9,7 +9,7 @@
       </p>
     </div>
     <div class="routerNav">
-      <router-link to="/user/user" class="routerBtn">
+      <router-link to="/user" class="routerBtn">
         <div class="routerText">
           <div>User</div>
           <small>Login / Join Or MyPage</small>
