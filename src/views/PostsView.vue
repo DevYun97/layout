@@ -79,7 +79,8 @@
       modalDate: '00.00.00',
       writeModal: false,
       posts_title:'',
-      posts_content:''
+      posts_content:'',
+      posts_name: null
     }),
     methods: {
       postsWriteBtn(){
@@ -114,7 +115,8 @@
       writeSubBtn(){
         this.axios.post('/api/v1/posts', {
           title: this.posts_title,
-          content: this.posts_content
+          content: this.posts_content,
+          name: this.posts_name
         })
         .then(res =>{
           console.log("res:"+res.data)
