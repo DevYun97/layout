@@ -111,6 +111,18 @@
           this.writeModal = false
         }
       },
+      writeSubBtn(){
+        this.axios.post('/api/v1/posts', {
+          title: this.testone,
+          content: this.testContent
+        })
+        .then(res =>{
+          console.log("res:"+res.data)
+        })
+        .catch(err=>{
+          console.log(err.res)
+        })
+      }
     }
   }
 </script>
