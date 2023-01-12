@@ -113,8 +113,8 @@
       },
       writeSubBtn(){
         this.axios.post('/api/v1/posts', {
-          title: this.testone,
-          content: this.testContent
+          title: this.posts_title,
+          content: this.posts_content
         })
         .then(res =>{
           console.log("res:"+res.data)
