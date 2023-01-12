@@ -90,62 +90,65 @@
       jModalYN(join){
         if( join == true ) {
           this.joinModal = true
-        } else if( join == false ) {
+        } 
+        else if( join == false ) {
           this.joinModal = false
         }
       },
       loginBtn(){
-        this.axios.post('/api/user/login', {
-          UID: this.user_id,
-          UPW: this.user_pw
+          this.axios.get('/api/user/login', {
+            auth: {
+              user_id: this.user_id,
+              user_pw: this.user_pw
+          }    
         })
         .then(res => {
-          console.log(" res: " + res.data)
+          console.log(res+":res / res.data:" + res.data)
         })
         .catch(err => {
-          console.log("err: " + err.res);
+          console.log("err!!");
         })
       },
       joinBtn(){
         console.log(this.$data)
-        // if(!this.user_id || this.user_id == ""){
-        //   console.log("id false")
-        //   return false
-        // }
-        // if(!this.user_pw || this.user_pw == ""){
-        //   console.log("pw false")
-        //   return false
-        // }
-        // if(!this.user_name || this.user_name == ""){
-        //   console.log("user_name false")
-        //   return false
-        // }
-        // if(!this.user_email || this.user_email == ""){
-        //   console.log("user_email false")
-        //   return false
-        // }
-        // if(!this.user_phone || this.user_phone == ""){
-        //   console.log("user_phone false")
-        //   return false
-        // }
-        // if(!this.joinChk || this.joinChk == ""){
-        //   console.log("joinChk false")
-        //   return false }
-        //  else {} 
-
-        this.axios.post('/api/v1/join', {
-          user_id: this.user_id,
-          user_pw: this.user_pw,
-          user_name: this.user_name,
-          user_email: this.user_email,
-          user_phone: this.user_phone
-        })
-        .then(res => {
-          console.log("res: " + res.data)
-        })
-        .catch(err => {
-          console.log(err+":err / err.res:" + err.res)
-        })          
+        if(!this.user_id || this.user_id == ""){
+          console.log("id false")
+          return false
+        }
+        if(!this.user_pw || this.user_pw == ""){
+          console.log("pw false")
+          return false
+        }
+        if(!this.user_name || this.user_name == ""){
+          console.log("user_name false")
+          return false
+        }
+        if(!this.user_email || this.user_email == ""){
+          console.log("user_email false")
+          return false
+        }
+        if(!this.user_phone || this.user_phone == ""){
+          console.log("user_phone false")
+          return false
+        }
+        if(!this.joinChk || this.joinChk == ""){
+          console.log("joinChk false")
+          return false }
+        else {
+          this.axios.post('/api/user/join', {
+            user_id: this.user_id,
+            user_pw: this.user_pw,
+            user_name: this.user_name,
+            user_email: this.user_email,
+            user_phone: this.user_phone
+          })
+          .then(res => {
+            console.log("res: " + res.data)
+          })
+          .catch(err => {
+            console.log(err+":err / err.res:" + err.res)
+          })  
+        }               
       }
     }
   }
